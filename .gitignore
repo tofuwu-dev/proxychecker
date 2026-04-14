@@ -1,0 +1,17 @@
+# Binary
+proxychecker
+proxychecker.exe
+
+# Build output
+dist/
+
+# Coverage
+coverage.out
+
+# Runtime output
+working_proxies.txt
+*.txt.out
+
+# OS
+.DS_Store
+Thumbs.db

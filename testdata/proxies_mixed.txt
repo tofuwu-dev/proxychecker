@@ -1,0 +1,36 @@
+# proxies_mixed.txt
+# This is a realistic sample proxy list covering all formats your parser
+# needs to handle. Lines starting with # are comments and should be skipped.
+
+# --- Bare host:port (most common format from cheap providers) ---
+192.168.1.1:8080
+10.0.0.1:3128
+203.0.113.42:8888
+
+# --- Full URL format without credentials ---
+http://198.51.100.10:8080
+https://198.51.100.20:443
+socks5://198.51.100.30:1080
+socks4://198.51.100.40:1080
+
+# --- Full URL format with credentials ---
+http://user:password@198.51.100.50:8080
+socks5://proxyuser:secret123@198.51.100.60:1080
+https://admin:p@ssw0rd@198.51.100.70:443
+
+# --- Colon-delimited with credentials (common export format) ---
+198.51.100.80:8080:myuser:mypass
+203.0.113.1:3128:scraper:hunter2
+
+# --- Edge cases ---
+# IPv6 (uncommon but real)
+[2001:db8::1]:8080
+
+# Blank lines below should be silently skipped
+
+
+# --- Invalid lines (should be recorded as failures, not crash) ---
+notaproxy
+:8080
+justahostname
+ftp://198.51.100.90:21

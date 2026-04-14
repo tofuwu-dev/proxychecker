@@ -1,0 +1,9 @@
+# Valid proxies for testing — replace with real proxies to test alive detection
+# Format: host:port (defaults to HTTP)
+8.8.8.8:80
+
+# Format: protocol://host:port
+http://1.1.1.1:80
+
+# Format: protocol://user:pass@host:port (placeholder credentials)
+http://user:password@example.com:8080
